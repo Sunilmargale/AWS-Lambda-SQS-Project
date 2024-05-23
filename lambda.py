@@ -5,7 +5,7 @@ def lambda_handler(event, context):
     # Get the SQS messages from the event
     print(event)
     ses_client = boto3.client('ses', region_name='ap-south-1')
-    reciever_email = '<Enter receiver email address that is verified in SES'
+    reciever_email = 'sunilmargale2706@gmail.com'
     
     for record in event['Records']:
         data = json.loads(record['body'])
@@ -32,7 +32,7 @@ def send_email(ses_client, to_email, bucket_name):
     body = f'The bucket {bucket_name} requires attention.'
     
     response = ses_client.send_email(
-        Source='Enter sender's email address that is verified in SES',
+        Source='sunilmargale27@gmail.com',
         Destination={'ToAddresses': [to_email]},
         Message={
             'Subject': {'Data': subject},
