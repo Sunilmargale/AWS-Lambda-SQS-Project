@@ -8,7 +8,5 @@ In this project, I will be creating an S3 bucket, Queue, and Lambda function. Wh
 
 AWS account and familiarity with AWS services
 
-**Article link**
 
-https://palak-bhawsar.hashnode.dev/s3-event-driven-email-notifications-using-aws-lambda-and-sqs
 
