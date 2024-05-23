@@ -4,7 +4,7 @@ import json
 def lambda_handler(event, context):
     # Get the SQS messages from the event
     print(event)
-    ses_client = boto3.client('ses', region_name='us-east-1')
+    ses_client = boto3.client('ses', region_name='ap-south-1')
     reciever_email = '<Enter receiver email address that is verified in SES'
     
     for record in event['Records']:
